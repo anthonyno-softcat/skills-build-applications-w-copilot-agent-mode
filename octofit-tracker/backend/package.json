@@ -5,6 +5,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx watch src/server.ts",
+    "seed": "tsx src/scripts/seed.ts",
     "start": "node dist/server.js"
   },
   "dependencies": {
