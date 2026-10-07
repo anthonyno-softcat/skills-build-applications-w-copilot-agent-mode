@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { fetchCollection } from '../api.js'
+import { fetchCollection as fetch } from '../api.js'
 
 function Teams() {
   const [teams, setTeams] = useState([])
@@ -8,7 +8,7 @@ function Teams() {
   useEffect(() => {
     let ignore = false
 
-    fetchCollection('/api/teams/')
+    fetch('/api/teams/')
       .then((data) => {
         if (!ignore) {
           setTeams(data)

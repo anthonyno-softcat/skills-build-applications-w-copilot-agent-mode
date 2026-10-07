@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { fetchCollection } from '../api.js'
+import { fetchCollection as fetch } from '../api.js'
 
 function Users() {
   const [users, setUsers] = useState([])
@@ -8,7 +8,7 @@ function Users() {
   useEffect(() => {
     let ignore = false
 
-    fetchCollection('/api/users/')
+    fetch('/api/users/')
       .then((data) => {
         if (!ignore) {
           setUsers(data)
